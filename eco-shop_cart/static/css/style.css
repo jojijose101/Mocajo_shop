@@ -1,0 +1,121 @@
+body{
+font-family: 'Mooli', sans-serif;
+
+}
+/**** navbar ***/
+.nav-item{
+letter-spacing:.2em;
+font-size : 14px;
+text-transform: uppercase;
+}
+.dropdown-item{
+letter-spacing:.2em;
+font-size : 14px;
+text-transform: uppercase;
+}
+.my_footer{
+  position: fixed;
+   bottom: 0;
+   width: 100%;
+   height: 60px;   /* Height of the footer */
+   background: #6cf;
+}
+.my_footer p{
+padding-top:20px;
+
+font-size:14px
+
+}
+
+/***** category ****/
+.my_row_class{
+padding-top:10px;
+}
+.my_row_class .mx-auto {
+color:#000;
+font-size:12px;
+
+}
+.my_img{
+width:100%;
+height:auto;
+}
+.my_title{
+font-size:20px;
+text-transform:uppercase;
+letter-spacing:.2em;
+}
+.my_img_pad{
+padding:5px;
+}
+.pr_img{
+height:200px;
+width:180px;
+}
+.my_margin{
+margin-bottom:10px;
+}
+
+/*** product page ***/
+
+.my_pr_row{
+padding-top:20px;
+padding-bottom:20px;
+
+}
+.my_pr_row .mx-auto{
+font-size:20px;
+color:#000;
+text-decoration:none;
+}
+.my_prod_title {
+font-size:20px;
+text-transform:uppercase;
+letter-spacing:.2em;
+padding-top:10px;
+padding-bottom:10px;
+
+}
+.my_prod_text{
+padding-right:10px;
+
+}
+/*** pagenator ***/
+.pg_num{
+padding-bottom:20px;
+}
+
+
+/*** cart page ***/
+
+.my_table{
+    min-width: 400px;
+    font-size: 14px;
+}
+.my_thead{
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    background-color: aqua;
+}
+.custom_a{
+text-decoration: none;
+
+}
+.custom_icon{
+
+    text-decoration: none;
+    color: blueviolet;
+}
+.my_button{
+
+    margin-top: 5px;
+}
+/*** footer ***/
+#footer {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   height: 60px;   /* Height of the footer */
+   background: #6cf;
+}

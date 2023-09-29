@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block metadescription %}
+
+<meta name="description" content="{{products.desc | truncatewords:155}}">
+
+
+{% endblock %}
+
+{% block title %}
+
+{{products.name}} -mocajo online shop
+
+{% endblock %}
+{% block content %}
+<div class="row my_pr_row">
+    <div class="mx-auto">
+        <p><a href="{% url 'ecoshop_app:allproductcat' %}">Home</a> | <a href="{{products.category.get_url}}">{{products.category}}</a> | {{products.name}} </p>
+    </div>
+</div>
+<div class="container">
+<br>
+<div  class="row ">
+    <div class="col-12 col-md-12 col-sm-12 col-lg-6 text-center">
+        <div style="min-width:18rem; pr_p_img">
+            <img style="width:400px; height:460px;" src="{{products.img.url}}" alt="{{products.name}}">
+        </div>
+    </div>
+
+
+
+    <div class="col-12 col-md-12 col-sm-12 col-lg-6 ">
+        <div>
+        <h3 class="my_prod_title">{{products.name}}</h3>
+        <p>{{products.price}}</p>
+        <h3 class="my_title">Product Description</h3>
+        <p class="text-justify my_prod_text">{{products.desc}}</p>
+        {% if products.stock <= 0 %}
+        <p class="text-justify my_prod_text"><b>Out of stock</b></p>
+        {% else %}
+        <a class=" btn btn-secondary" href="{% url 'cart_app:addcart' products.id %}">Add to cart</a>
+        {% endif %}
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+{% endblock %}

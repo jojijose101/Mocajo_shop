@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block metadescription %}
+
+<meta name="description" content="{{products.desc | truncatewords:155}}">
+
+
+{% endblock %}
+
+{% block title %}
+
+{{products.name}} -mocajo online shop
+
+{% endblock %}
+
+{% block content %}
+<div>
+    <p>you have Searched For: {{query}}</p>
+
+</div>
+ <div class="row mx-auto">
+        {% for pr in products %}
+        <div class=" my_margin col-9 col-sm-12 col-md-4 " >
+            <div class="card text-center " style="min-width:18rem;">
+
+                    <div>
+                <a href="{{pr.get_url}}"><img class="pr_img card-img-top" src="{{pr.img.url}}" alt="{{pr.name}}"></a>
+            </div>
+            <div class="card-body">
+                <h3>{{pr.name}}</h3>
+                <p><b>{{pr.price}}</b></p>
+                <p>{{pr.desc}}</p>
+            </div>
+                </div>
+
+        </div>
+      {% endfor %}
+    </div>
+
+
+{% endblock %}
